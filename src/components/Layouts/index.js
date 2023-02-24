@@ -11,7 +11,7 @@ export default function Layout() {
         <Sidebar />
         {/* <div >Navbar</div> */}
 
-        <div className="flex flex-col w-full px-5 py-5 overflow-y-auto bg-slate-100">
+        <div className="flex flex-col w-full px-8 py-8 overflow-y-auto bg-slate-100">
           <Outlet />
         </div>
       </div>

@@ -4,7 +4,12 @@ import { Link } from "react-router-dom";
 const Dashboard = () => {
   return (
     <div className="">
-      <p>This is a Dashboard</p>
+      <p>
+        <div className="text-sm">
+          <span className="text-lg mr-3">👋 </span>Hi Admin!
+        </div>
+        <div className="text-2xl pt-1">Welcome to your dashboard</div>
+      </p>
       {/* <Link to='/engagements' className='underline'>go to engagements</Link> */}
     </div>
   );
