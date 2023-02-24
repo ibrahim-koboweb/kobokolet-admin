@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import { Link, useLocation } from "react-router-dom";
-import { HiOutlineLogout } from "react-icons/hi";
+
 import {
   DASHBOARD_SIDEBAR_LINKS,
   DASHBOARD_SIDEBAR_BOTTOM_LINKS,
