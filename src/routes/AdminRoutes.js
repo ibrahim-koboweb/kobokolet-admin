@@ -13,7 +13,7 @@ const AdminRoutes = () => {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Layout />} >
-          <Route index element={<Dashboard />} />
+         <Route index element={<Dashboard />} />
          <Route path="/engagements" element={<EngagementHome />} />
          <Route path="/field-agents" element={<FieldAgentLists />} />
          <Route path="/enumeration" element={<EnumerationHome />} />
