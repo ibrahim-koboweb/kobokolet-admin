@@ -7,6 +7,7 @@ module.exports = {
   ],
   theme: {
     screens: {
+      xs: "350px",
       sm: "480px",
       md: "768px",
       lg: "976px",
@@ -14,7 +15,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "hsl(152, 40%, 46%)",
+        primary: "#46A578",
         faint: "hsl(153, 33%, 94%)",
         newFaint: "hsl(0, 0%, 96%)",
         customGray: "hsl(0, 0%, 85%)",
