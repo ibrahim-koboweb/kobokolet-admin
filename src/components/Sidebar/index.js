@@ -12,7 +12,7 @@ const linkClass =
 
 export default function Sidebar() {
   return (
-    <div className="bg-white w-80  flex flex-col border-r border-neutral-300 ">
+    <div className="bg-white w-80 flex-col border-r border-neutral-300 hidden lg:block md:block ">
       <div className="pb-8 flex flex-1 flex-col gap-0.5 overflow-y-auto">
         <div className="p-5">
           {DASHBOARD_SIDEBAR_LINKS.map((link) => (
@@ -43,7 +43,7 @@ function SidebarLink({ link }) {
       )}
     >
       <span className="text-xl">{link.icon}</span>
-      <span className="pl-4">{link.label}</span>
+      <span className="pl-4 text-sm">{link.label}</span>
     </Link>
   );
 }
