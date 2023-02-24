@@ -12,7 +12,7 @@ const linkClass =
 
 export default function Sidebar() {
   return (
-    <div className="bg-white w-80 flex-col border-r border-neutral-300 hidden lg:block md:block ">
+    <div className="bg-white w-80  flex-col border-r border-neutral-300 hidden lg:flex md:flex ">
       <div className="pb-8 flex flex-1 flex-col gap-0.5 overflow-y-auto">
         <div className="p-5">
           {DASHBOARD_SIDEBAR_LINKS.map((link) => (

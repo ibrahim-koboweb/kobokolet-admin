@@ -1,12 +1,10 @@
 import {
   HiOutlineViewGrid,
   HiOutlineCube,
-  HiOutlineShoppingCart,
   HiOutlineUsers,
   HiOutlineDocumentText,
   HiOutlineAnnotation,
   HiOutlineQuestionMarkCircle,
-  HiOutlineCog,
 } from "react-icons/hi";
 
 export const DASHBOARD_SIDEBAR_LINKS = [
