@@ -13,7 +13,7 @@ export default function Header() {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-white h-16 fixed w-screen px-4 flex items-center border-b border-gray-200 justify-between">
+    <div className="bg-white h-16 fixed w-screen px-4 flex items-center  shadow border-gray-200 justify-between">
       <div className="flex items-center gap-2 px-1 py-3">
         <FcBullish fontSize={24} />
         <span className="text-neutral-900 text-lg">KoboWeb</span>

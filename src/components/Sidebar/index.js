@@ -8,11 +8,11 @@ import {
 } from "../../lib/constants";
 
 const linkClass =
-  "flex items-center gap-2 mt-5  px-3 py-2 hover:text-emerald-500 hover:no-underline active:bg-emerald-500 rounded-md text-base";
+  "flex items-center gap-2 mt-5 transition-colors duration-500  px-3 py-2 hover:no-underline rounded-md text-base";
 
 export default function Sidebar() {
   return (
-    <div className="bg-white w-80  flex flex-col ">
+    <div className="bg-white w-80  flex flex-col border-r border-neutral-300 ">
       <div className="pb-8 flex flex-1 flex-col gap-0.5 overflow-y-auto">
         <div className="p-5">
           {DASHBOARD_SIDEBAR_LINKS.map((link) => (
@@ -37,8 +37,8 @@ function SidebarLink({ link }) {
       to={link.path}
       className={classNames(
         pathname === link.path
-          ? "bg-emerald-500 text-white"
-          : "text-neutral-900",
+          ? "bg-primary text-white hover:text-white"
+          : "text-neutral-900 hover:text-primary ",
         linkClass
       )}
     >
