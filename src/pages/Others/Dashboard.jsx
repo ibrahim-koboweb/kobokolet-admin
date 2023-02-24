@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   return (
-    <div className="px-5 py-5">
+    <div className="">
       <p>This is a Dashboard</p>
       {/* <Link to='/engagements' className='underline'>go to engagements</Link> */}
     </div>
