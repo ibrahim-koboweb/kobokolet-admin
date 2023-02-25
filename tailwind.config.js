@@ -4,6 +4,7 @@ module.exports = {
     "./src/**/*.{html,js,jsx}",
     "./src/components/**/*.{html,js,jsx}",
     "./src/pages/**/*.{html,js,jsx}",
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
   ],
   theme: {
     screens: {
@@ -14,7 +15,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "hsl(152, 40%, 46%)",
+        primary: "#46A576",
         faint: "hsl(153, 33%, 94%)",
         newFaint: "hsl(0, 0%, 96%)",
         customGray: "hsl(0, 0%, 85%)",
@@ -23,5 +24,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 };
