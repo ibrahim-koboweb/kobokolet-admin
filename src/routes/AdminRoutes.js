@@ -2,11 +2,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Login } from "../pages/Auth";
 import { Dashboard } from "../pages/Others";
 import Layout from "../components/Layouts";
+
 import { FieldAgentLists, AddFieldAgents, PendingFieldAgents, ApprovedFieldAgents, RejectedFieldAgents } from "../pages/FieldAgent";
 import  { EngagementHome, CreateEngagement, PendingEngagement} from "../pages/Engagement";
 import { AllAttendees, AllFarmers, OngoingEnumeration } from "../pages/Enumeration";
 import Cluster from "../pages/Cluster";
 import Influencer from "../pages/Influencer";
+
 
 const AdminRoutes = () => {
   return (
@@ -29,6 +31,7 @@ const AdminRoutes = () => {
           <Route path="/all-farmers" element={<AllFarmers />} />
           <Route path="/cluster" element={<Cluster />} />
           <Route path="/influencer" element={<Influencer />} />
+
 
         </Route>
       </Routes>

@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import { Link, useLocation } from "react-router-dom";
+
 import {RiArrowDownSLine, RiArrowUpSLine} from "react-icons/ri";
 import {
   DASHBOARD_SIDEBAR_LINKS,
@@ -8,17 +9,12 @@ import {
 } from "../../lib/constants";
 import { useState } from "react";
 
-
 const linkClass =
   "flex items-center w-full  gap-2 mt-4 transition-colors duration-300  px-3 py-2 hover:no-underline rounded-md text-base";
-
-
-
 
 export default function Sidebar() {
 
   
-
   return (
     <div className="bg-white w-80  flex-col border-r border-neutral-300 hidden lg:flex md:flex ">
       <div className="pb-8 flex flex-1 flex-col gap-0.5 overflow-y-auto">
@@ -28,6 +24,7 @@ export default function Sidebar() {
           {DASHBOARD_SIDEBAR_LINKS.map((link) => (
             link.dropdown === false ?
             <SidebarLink key={link.key} link={link} /> : <SidebarButton key={link.key} link={link} />
+
           ))}
         </div>
       </div>
@@ -57,6 +54,7 @@ function SidebarLink({ link }) {
       <span className="pl-4 text-sm">{link.label}</span>
     </Link>
   );
+
 }
 
 

@@ -1,8 +1,10 @@
 import React, { Fragment } from "react";
 import { Menu, Popover, Transition } from "@headlessui/react";
+
 import {
   HiOutlineBell,
 } from "react-icons/hi";
+
 import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 import { FcBullish } from "react-icons/fc";
@@ -16,6 +18,7 @@ export default function Header() {
         <FcBullish fontSize={24} />
         <span className="text-neutral-900 text-lg">KoboWeb</span>
       </div>
+
 
       <div className="flex items-center gap-2 mr-2">
         <Popover className="relative">
