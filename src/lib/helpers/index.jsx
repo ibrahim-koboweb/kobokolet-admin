@@ -1,4 +1,4 @@
-export function getOrderStatus(status) {
+export function getAgentStatus(status) {
 	switch (status) {
 		
 		case 'REJECTED':

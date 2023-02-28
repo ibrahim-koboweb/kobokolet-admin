@@ -69,7 +69,7 @@ const fieldAgentData = [
   },
 ];
 
-export default function PendingFieldAgents() {
+export default function AllFieldAgents() {
   return (
     <div>
       <div className="text-xl pt-1">All Field Agents</div>

@@ -3,7 +3,7 @@ import { Login } from "../pages/Auth";
 import { Dashboard } from "../pages/Others";
 import Layout from "../components/Layouts";
 
-import { FieldAgentLists, AddFieldAgents, PendingFieldAgents, ApprovedFieldAgents, RejectedFieldAgents } from "../pages/FieldAgent";
+import { AllFieldAgents, AddFieldAgents, PendingFieldAgents,} from "../pages/FieldAgent";
 import  { EngagementHome, CreateEngagement, PendingEngagement} from "../pages/Engagement";
 import { AllAttendees, AllFarmers, OngoingEnumeration } from "../pages/Enumeration";
 import Cluster from "../pages/Cluster";
@@ -18,11 +18,9 @@ const AdminRoutes = () => {
 
         <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
-          <Route path="/field-agents" element={<FieldAgentLists />} />
+          <Route path="/field-agents" element={<AllFieldAgents />} />
           <Route path="/add-agents" element={<AddFieldAgents />} />
           <Route path="/pending-agents" element={<PendingFieldAgents />} />
-          <Route path="/approved-agents" element={<ApprovedFieldAgents />} />
-          <Route path="/rejected-agents" element={<RejectedFieldAgents />} />
           <Route path="/engagements" element={<EngagementHome />} />
           <Route path="/create-engagement" element={<CreateEngagement />} />
           <Route path="/pending-engagement" element={<PendingEngagement />} />

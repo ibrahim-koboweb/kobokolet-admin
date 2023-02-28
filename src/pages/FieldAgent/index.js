@@ -1,7 +1,5 @@
-import FieldAgentLists from "./FieldAgentLists";
+import AllFieldAgents from "./AllFieldAgents";
 import AddFieldAgents from "./AddFieldAgents";
 import PendingFieldAgents from "./PendingFieldAgents";
-import ApprovedFieldAgents from "./ApprovedFieldAgents";
-import RejectedFieldAgents from "./RejectedFieldAgents";
 
-export { FieldAgentLists, AddFieldAgents, PendingFieldAgents, ApprovedFieldAgents, RejectedFieldAgents };
+export { AllFieldAgents, AddFieldAgents, PendingFieldAgents };

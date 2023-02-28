@@ -45,18 +45,7 @@ export const DASHBOARD_SIDEBAR_LINKS = [
           path: "/pending-agents",
           icon: <MdOutlineCircle />,
         },
-        {
-          key: "approvedagentrequest",
-          label: "Approved Agents Request",
-          path: "/approved-agents",
-          icon: <MdOutlineCircle />,
-        },
-        {
-          key: "rejectedagents",
-          label: "Rejected Agents",
-          path: "/rejected-agents",
-          icon: <MdOutlineCircle />,
-        },
+       
 
       ]
   },
