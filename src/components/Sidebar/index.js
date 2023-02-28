@@ -99,7 +99,7 @@ function SidebarButton({ link }) {
           className={classNames(
             pathname === item.path
               ? "bg-primary text-white hover:text-white"
-              : "text-neutral-900 hover:text-primary ",
+              : "text-neutral-900 font-light hover:text-primary ",
               'flex items-center w-full items-start mt-2 px-3 py-2 rounded-md transition-colors duration-300'
           )}
           >

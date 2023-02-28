@@ -1,7 +1,10 @@
 import React from "react";
+import Table from '../../components/Table'
 
 const FieldAgentLists = () => {
-  return <div>FieldAgentLists</div>;
+  return <div>
+   <Table />
+  </div>;
 };
 
 export default FieldAgentLists;

@@ -1,12 +1,16 @@
 import {
   HiOutlineViewGrid,
-  HiOutlineCube,
   HiOutlineUsers,
-  HiOutlineDocumentText,
-  HiOutlineAnnotation,
   HiOutlineQuestionMarkCircle,
+
 } from "react-icons/hi";
+import {
+  HiOutlineDocumentText,
+  HiOutlineDocumentCheck
+} from "react-icons/hi2";
 import {MdOutlineCircle} from 'react-icons/md'
+import {BiHive} from 'react-icons/bi'
+import {RiUserStarLine} from 'react-icons/ri'
 
 
 export const DASHBOARD_SIDEBAR_LINKS = [
@@ -21,11 +25,11 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     key: "fieldagents",
     label: "Field Agents",
     path: "#",
-    icon: <HiOutlineCube />,
+    icon: <HiOutlineUsers />,
     dropdown: [
         {
           key: "allfieldagents",
-          label: "Field Agents",
+          label: "All Field Agents",
           path: "/field-agents",
           icon: <MdOutlineCircle />,
         },
@@ -60,7 +64,7 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     key: "engagements",
     label: "Engagements",
     path: "#",
-    icon: <HiOutlineUsers />,
+    icon: <HiOutlineDocumentText />,
     dropdown: [
       {
         key: "allengagements",
@@ -88,7 +92,7 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     key: "enumeration",
     label: "Enumeration",
     path: "#",
-    icon: <HiOutlineUsers />,
+    icon: <HiOutlineDocumentCheck />,
     dropdown: [
       {
         key: "allattendees",
@@ -116,14 +120,14 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     key: "cluster",
     label: "Cluster",
     path: "/cluster",
-    icon: <HiOutlineAnnotation />,
+    icon: <BiHive />,
     dropdown: false,
   },
   {
     key: "influencer",
     label: "Influencer",
     path: "/influencer",
-    icon: <HiOutlineDocumentText />,
+    icon: <RiUserStarLine />,
     dropdown: false,
   },
 ];
