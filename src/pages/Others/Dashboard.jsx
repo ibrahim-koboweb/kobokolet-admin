@@ -73,7 +73,7 @@ const Dashboard = () => {
                   fill="#46A578"
                 />
               </svg>
-              <span>Field Agent</span>
+              <span>Total Cluster</span>
             </div>
             <div className="p-4">
               <span className="font-bold">1,874</span>
@@ -108,7 +108,7 @@ const Dashboard = () => {
                   fill="#46A578"
                 />
               </svg>
-              <span>Field Agent</span>
+              <span>Total Engagement</span>
             </div>
             <div className="p-4">
               <span className="font-bold">1,874</span>
@@ -143,7 +143,7 @@ const Dashboard = () => {
                   fill="#46A578"
                 />
               </svg>
-              <span>Field Agent</span>
+              <span>Total Farmers</span>
             </div>
             <div className="p-4">
               <span className="font-bold">1,874</span>
