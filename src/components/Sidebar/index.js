@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import { Link, useLocation } from "react-router-dom";
 
-import {RiArrowDownSLine, RiArrowUpSLine} from "react-icons/ri";
+import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
 import {
   DASHBOARD_SIDEBAR_LINKS,
   DASHBOARD_SIDEBAR_BOTTOM_LINKS,
@@ -13,19 +13,19 @@ const linkClass =
   "flex items-center w-full  gap-2 mt-4 transition-colors duration-300  px-3 py-2 hover:no-underline rounded-md text-base";
 
 export default function Sidebar() {
-
-  
   return (
     <div className="bg-white w-80  flex-col border-r border-neutral-300 hidden lg:flex md:flex ">
       <div className="pb-8 flex flex-1 flex-col gap-0.5 overflow-y-auto">
-    {/* <Dropdown /> */}
+        {/* <Dropdown /> */}
 
         <div className="p-4">
-          {DASHBOARD_SIDEBAR_LINKS.map((link) => (
-            link.dropdown === false ?
-            <SidebarLink key={link.key} link={link} /> : <SidebarButton key={link.key} link={link} />
-
-          ))}
+          {DASHBOARD_SIDEBAR_LINKS.map((link) =>
+            link.dropdown === false ? (
+              <SidebarLink key={link.key} link={link} />
+            ) : (
+              <SidebarButton key={link.key} link={link} />
+            )
+          )}
         </div>
       </div>
       <div className="flex flex-col gap-0.5 pb-3 border-t border-neutral-300">
@@ -50,21 +50,19 @@ function SidebarLink({ link }) {
         linkClass
       )}
     >
-      <span className="text-xl">{link.icon}</span>
-      <span className="pl-4 text-sm">{link.label}</span>
+      <span className="text-2xl">{link.icon}</span>
+      <span className="pl-4 text-base">{link.label}</span>
     </Link>
   );
-
 }
 
-
-
 function SidebarButton({ link }) {
-  const[isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const { pathname } = useLocation();
 
   return (
     <div>
+
    <button
    onClick={() => setIsOpen( (prev) => !prev )}
    className = {classNames(
@@ -118,5 +116,6 @@ function SidebarButton({ link }) {
     }
       
    </div>
+
   );
 }
