@@ -72,7 +72,6 @@ const fieldAgentData = [
 export default function EngagementList() {
   return (
     <div>
-
       <div className="mt-6 bg-white px-4 pt-3 pb-4 rounded-sm border border-gray-200 flex-1">
         <div className="flex items-end py-2 justify-between">
           <div>
@@ -153,7 +152,10 @@ export default function EngagementList() {
                   <td>{getAgentStatus(agent.status)}</td>
                   <td>
                     <span className="flex items-center gap-2">
-                      <GrView /> <FiEdit /> <MdDeleteOutline fontSize={20} />
+                      <Link to="/engagement-details">
+                        <GrView />
+                      </Link>
+                      <FiEdit /> <MdDeleteOutline fontSize={20} />
                     </span>
                   </td>
                 </tr>

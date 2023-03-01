@@ -8,6 +8,7 @@ import  { EngagementHome, CreateEngagement, PendingEngagement} from "../pages/En
 import { AllAttendees, AllFarmers, OngoingEnumeration } from "../pages/Enumeration";
 import Cluster from "../pages/Cluster";
 import Influencer from "../pages/Influencer";
+import EngagementDetails from "../pages/Engagement/EngagementHome/EngagementDetails";
 
 
 const AdminRoutes = () => {
@@ -22,6 +23,7 @@ const AdminRoutes = () => {
           <Route path="/add-agents" element={<AddFieldAgents />} />
           <Route path="/pending-agents" element={<PendingFieldAgents />} />
           <Route path="/engagements" element={<EngagementHome />} />
+          <Route path="/engagement-DETAILS" element={<EngagementDetails />} />
           <Route path="/create-engagement" element={<CreateEngagement />} />
           <Route path="/pending-engagement" element={<PendingEngagement />} />
           <Route path="/enumeration" element={<AllAttendees />} />
@@ -29,8 +31,6 @@ const AdminRoutes = () => {
           <Route path="/all-farmers" element={<AllFarmers />} />
           <Route path="/cluster" element={<Cluster />} />
           <Route path="/influencer" element={<Influencer />} />
-
-
         </Route>
       </Routes>
     </Router>
