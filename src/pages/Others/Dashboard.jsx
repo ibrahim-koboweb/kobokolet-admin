@@ -1,4 +1,5 @@
 import React from "react";
+// import Stats from "../../components/Stats";
 
 const Dashboard = () => {
   return (
@@ -9,6 +10,10 @@ const Dashboard = () => {
         </div>
         <div className="text-xl pt-1">Welcome to your dashboard</div>
       </p>
+      <div className="mt-8" >
+      {/* <Stats/> */}
+      </div>
+    
       <div className="mt-8">
         <div className="grid lg:grid-cols-4 lg:grid-rows-1  xs:grid-cols-2 xs:grid-rows-2   gap-4">
           <div className="bg-white rounded p-3 ">
@@ -158,8 +163,8 @@ const Dashboard = () => {
           <div className="bg-white rounded p-3 h-80">2</div>
         </div>
       </div>
+      
 
-      {/* <Link to='/engagements' className='underline'>go to engagements</Link> */}
     </div>
   );
 };
