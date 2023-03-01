@@ -15,7 +15,7 @@ const fieldAgentData = [
     engagement: "5",
     farmers: "5",
     cluster: "Egeni Bode community",
-    status: "REJECTED",
+    status: "PENDING",
   },
   {
     id: "7",
@@ -26,16 +26,6 @@ const fieldAgentData = [
     farmers: "14",
     cluster: "Akoko Edo",
     status: "PENDING",
-  },
-  {
-    id: "2",
-    agent_id: "5434",
-    agent_name: "Mason Nash",
-    phone_no: "08100112233",
-    engagement: "34",
-    farmers: "34",
-    cluster: "Eshan Community",
-    status: "APPROVED",
   },
   {
     id: "3",
@@ -56,16 +46,6 @@ const fieldAgentData = [
     farmers: "32",
     cluster: "Afao Community",
     status: "PENDING",
-  },
-  {
-    id: "5",
-    agent_id: "5627",
-    agent_name: "Ryan Carroll",
-    phone_no: "08100112233",
-    engagement: "65",
-    farmers: "65",
-    cluster: "Benden Community",
-    status: "APPROVED",
   },
 ];
 

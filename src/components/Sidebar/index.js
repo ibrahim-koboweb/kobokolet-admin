@@ -62,60 +62,47 @@ function SidebarButton({ link }) {
 
   return (
     <div>
+      <button
+        onClick={() => setIsOpen((prev) => !prev)}
+        className={classNames(
+          isOpen === true
+            ? "text-primary "
+            : "text-neutral-900 hover:text-primary ",
+          "justify-between",
+          linkClass
+        )}
+      >
+        <span className={"flex items-center"}>
+          <span className="text-2xl">{link.icon}</span>
+          <span className="pl-4 text-base">{link.label}</span>
+        </span>
+        {isOpen ? (
+          <RiArrowUpSLine fontSize={24} />
+        ) : (
+          <RiArrowDownSLine fontSize={24} />
+        )}
+      </button>
 
-   <button
-   onClick={() => setIsOpen( (prev) => !prev )}
-   className = {classNames(
-    isOpen === true 
-     ? "text-primary " 
-     : "text-neutral-900 hover:text-primary ",
-    'justify-between', linkClass)}
-   >
+      {isOpen && (
+        <div className="bg-white w-full  ">
+          {link.dropdown.map((item) => (
+            <Link
+              to={item.path}
+              className={classNames(
+                pathname === item.path
+                  ? "bg-primary text-white hover:text-white"
+                  : "text-neutral-900 font-light hover:text-primary ",
+                "flex items-center w-full items-start mt-2 px-3 py-2 rounded-md transition-colors duration-300"
+              )}
+            >
+              <span className="text-xs">{item.icon}</span>
+              <span className="pl-4 text-sm">{item.label}</span>
+            </Link>
 
-    <span className = {'flex items-center' } >
-        <span className="text-xl">{link.icon}</span>
-        <span className="pl-4 text-sm">{link.label}</span>
-    </span>
-    {isOpen ? (
-    <RiArrowUpSLine fontSize={24}/>
-    ):
-    <RiArrowDownSLine fontSize={24}/>
-    }
-
-   
-   </button>
-
-{isOpen &&
-     (
-
-      
-      <div className="bg-white w-full  ">
-        {link.dropdown.map((item) => (
-
-          <Link
-          to={item.path}
-          className={classNames(
-            pathname === item.path
-              ? "bg-primary text-white hover:text-white"
-              : "text-neutral-900 font-light hover:text-primary ",
-              'flex items-center w-full items-start mt-2 px-3 py-2 rounded-md transition-colors duration-300'
-          )}
-          >
-           <span className="text-xl">{item.icon}</span>
-        <span className="pl-4 text-sm">{item.label}</span>
-          </Link>
-
-// flex items-center w-full items-start mt-4
-         
-        ))
-
-        }
-      </div>
-     )
-
-    }
-      
-   </div>
-
+            // flex items-center w-full items-start mt-4
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
