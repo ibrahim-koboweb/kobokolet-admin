@@ -8,54 +8,92 @@ export default function EngagementDetails() {
     <div>
       <div className="text-base pt-1">Engagements Details</div>
       <div className="mt-4">
-        <div className="grid lg:grid-cols-2 lg:grid-rows-1 gap-4">
-          <div className="bg-white rounded p-6 h-80">
-            <h2 className="text-2xl font-regular">
-              Kubwa Farmers Community Engagement by Aniebiet Abasi
-            </h2>
-            <div className="gap-y-4 column-gap">
-              <div className="mt-6">
-                <span className="flex gap-2 mt-1 items-center">
-                  <p>Status:</p> <p className="font-light">Status</p>
-                </span>
+        <div className="grid lg:grid-cols-2 lg:grid-rows-1 ">
+          <div className="bg-grey-100 rounded p-6 ">
+            <div className="bg-white rounded p-6">
+              <h2 className="text-2xl font-regular">
+                Kubwa Farmers Community Engagement by Aniebiet Abasi
+              </h2>
+              <div className="gap-y-4 column-gap">
+                <div className="mt-6">
+                  <span className="flex gap-2 mt-1 items-center">
+                    <p>Status:</p> <p className="font-light">Status</p>
+                  </span>
+                </div>
+                <div>
+                  <span className="flex gap-2 mt-1 items-center">
+                    <p>Engagement Type :</p>{" "}
+                    <p className="font-light">Status</p>
+                  </span>
+                </div>
+                <div>
+                  <span className="flex gap-2 mt-1 items-center">
+                    <p>State: </p> <p className="font-light">Benin</p>
+                  </span>
+                </div>
+                <div>
+                  <span className="flex gap-2 mt-1 items-center">
+                    <p>L.G.A: </p> <p className="font-light">Benden</p>
+                  </span>
+                </div>
+                <div>
+                  <span className="flex gap-2 mt-1 items-center">
+                    <p>Ward:</p> <p className="font-light">Ikperi</p>
+                  </span>
+                </div>
+                <div>
+                  <span className="flex gap-2 mt-1 items-center">
+                    <p>Date:</p> <p className="font-light">02/04/2023</p>
+                  </span>
+                </div>
+                <div>
+                  <span className="flex gap-2 mt-1 items-center">
+                    <p>Time:</p> <p className="font-light">12:23pm</p>
+                  </span>
+                </div>
               </div>
-              <div>
-                <span className="flex gap-2 mt-1 items-center">
-                  <p>Engagement Type :</p> <p className="font-light">Status</p>
-                </span>
+            </div>
+
+            <div className="bg-white flex-1 rounded p-6 mt-6">
+              <div className="flex align-center justify-between text-md">
+                <p>Assigned Field Agents</p>
+                <Link className="text-primary" to="#">
+                  Assign a Field Agent
+                </Link>
               </div>
-              <div>
-                <span className="flex gap-2 mt-1 items-center">
-                  <p>State: </p> <p className="font-light">Benin</p>
-                </span>
-              </div>
-              <div>
-                <span className="flex gap-2 mt-1 items-center">
-                  <p>L.G.A: </p> <p className="font-light">Benden</p>
-                </span>
-              </div>
-              <div>
-                <span className="flex gap-2 mt-1 items-center">
-                  <p>Ward:</p> <p className="font-light">Ikperi</p>
-                </span>
-              </div>
-              <div>
-                <span className="flex gap-2 mt-1 items-center">
-                  <p>Date:</p> <p className="font-light">02/04/2023</p>
-                </span>
-              </div>
-              <div>
-                <span className="flex gap-2 mt-1 items-center">
-                  <p>Time:</p> <p className="font-light">12:23pm</p>
-                </span>
+              <div className="mt-8">
+                <div className="flex items-center mt-2 gap-2">
+                  <div
+                    className="h-6 w-6 rounded-full bg-sky-500 bg-cover bg-no-repeat bg-center"
+                    style={{
+                      backgroundImage:
+                        'url("https://source.unsplash.com/80x80?face")',
+                    }}
+                  >
+                    {" "}
+                  </div>
+                  <p>Sani Gabriel</p>
+                </div>
+                <div className="flex items-center mt-3 gap-2">
+                  <div
+                    className="h-6 w-6 rounded-full bg-sky-500 bg-cover bg-no-repeat bg-center"
+                    style={{
+                      backgroundImage:
+                        'url("https://source.unsplash.com/80x80?face")',
+                    }}
+                  >
+                    {" "}
+                  </div>
+                  <p>Musa Mohammad</p>
+                </div>
               </div>
             </div>
           </div>
+
           <div className="bg-grey-100 rounded p-6 h-80">
-            <div className="flex align-center justify-between text-sm">
+            <div className="flex align-center justify-between text-md">
               <p>Engagement Report</p>
-              <Link className="text-primary" to="/engagement/details">
-                {" "}
+              <Link className="text-primary" to="/engagement/details/attendees">
                 View All Attendees
               </Link>
             </div>

@@ -1,91 +1,78 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { getAgentStatus } from "../../../lib/helpers";
 import { GrView } from "react-icons/gr";
 import { FiEdit } from "react-icons/fi";
 import { MdDeleteOutline } from "react-icons/md";
 import { HiOutlineSearch } from "react-icons/hi";
-import { format } from "date-fns";
-
 
 const fieldAgentData = [
   {
     id: "1",
-    agent_id: "4324",
+    agent_id: "Male",
     agent_name: "Shirley A. Lape",
-    phone_no: "56",
-    state: "Kano",
+    phone_no: "08100112233",
+    engagement: "Yes",
     farmers: "5",
-    cluster: "Egeni Bode LGA",
-    city: "Egeni",
-    creation_date: "2022-05-17T03:24:00",
+    cluster: "Micheal",
     status: "REJECTED",
   },
   {
     id: "7",
-    agent_id: "7453",
+    agent_id: "Male",
     agent_name: "Ryan Carroll",
-    phone_no: "56",
-    state: "Katsina",
+    phone_no: "08100112233",
+    engagement: "No",
     farmers: "14",
-    cluster: "Akoko Edo",
-    city: "Akoko",
-    creation_date: "2022-05-17T03:24:00",
+    cluster: "Tony",
     status: "PENDING",
   },
   {
     id: "2",
-    agent_id: "5434",
+    agent_id: "Female",
     agent_name: "Mason Nash",
-    phone_no: "56",
-    state: "Abuja",
+    phone_no: "08100112233",
+    engagement: "Yes",
     farmers: "34",
-    cluster: "Eshan LGA",
-    city: "Eshan",
-    creation_date: "2022-05-17T03:24:00",
+    cluster: "Sani",
     status: "APPROVED",
   },
   {
     id: "3",
-    agent_id: "9854",
+    agent_id: "Female",
     agent_name: "Luke Parkin",
-    phone_no: "56",
-    state: "Kaduna",
+    phone_no: "08100112233",
+    engagement: "Yes",
     farmers: "12",
-    cluster: "Esako LGA",
-    city: "Esako",
-    creation_date: "2022-05-17T03:24:00",
+    cluster: "Busayo",
     status: "PENDING",
   },
   {
     id: "4",
-    agent_id: "8763",
+    agent_id: "Male",
     agent_name: "Anthony Fry",
-    phone_no: "56",
-    state: "Sokoto",
+    phone_no: "08100112233",
+    engagement: "No",
     farmers: "32",
-    cluster: "Afao LGA",
-    city: "Afao",
-    creation_date: "2022-05-17T03:24:00",
+    cluster: "Friday",
     status: "PENDING",
   },
   {
     id: "5",
-    agent_id: "5627",
+    agent_id: "Male",
     agent_name: "Ryan Carroll",
-    phone_no: "56",
-    state: "borno",
+    phone_no: "08100112233",
+    engagement: "No",
     farmers: "65",
-    city: "Benden",
-    cluster: "Benden LGA",
-    creation_date: "2022-05-17T03:24:00",
+    cluster: "Benden",
     status: "APPROVED",
   },
 ];
 
-export default function EngagementList() {
+export default function EngagementAttendees() {
   return (
     <div>
+      <div className="text-xl pt-1">All Attendees</div>
+
       <div className="mt-6 bg-white px-4 pt-3 pb-4 rounded-sm border border-gray-200 flex-1">
         <div className="flex items-end py-2 justify-between">
           <div>
@@ -123,14 +110,13 @@ export default function EngagementList() {
             <thead>
               <tr>
                 <th>S/N</th>
-                <th>Engagement Type</th>
+                <th>Attendee Name</th>
+                <th>Gender</th>
+                <th>Phone Number</th>
+                <th>Have NIN</th>
+                <th>Engagement ID</th>
                 <th>Assigned Agent</th>
-                <th>Attendees</th>
-                <th>State</th>
-                <th>LGA</th>
-                <th>City</th>
-                <th>Date</th>
-                <th>Status</th>
+                <th>Cluster ID</th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -140,20 +126,19 @@ export default function EngagementList() {
                   <td>
                     <Link to={`/order/${agent.id}`}>#{agent.id}</Link>
                   </td>
-                  <td>
-                    <Link to="#">{agent.agent_name}</Link>
+                  <td>     
+                      <Link to="#">{agent.agent_name}</Link>
                   </td>
                   <td>
                     <Link to={`/product/${agent.agent_id}`}>
-                      #{agent.agent_id}
+                      {agent.agent_id}
                     </Link>
                   </td>
                   <td>{agent.phone_no}</td>
-                  <td>{agent.state}</td>
+                  <td>{agent.engagement}</td>
+                  <td>{agent.farmers}</td>
                   <td>{agent.cluster}</td>
-                  <td>{agent.city}</td>
-                  <td>{format(new Date(agent.creation_date), "dd MMM yyyy")}</td>
-                  <td>{getAgentStatus(agent.status)}</td>
+                  <td>#567657</td>
                   <td>
                     <span className="flex items-center gap-2">
                       <Link to="/engagement/details">

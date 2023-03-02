@@ -15,7 +15,7 @@ const fieldAgentData = [
     engagement: "5",
     farmers: "5",
     cluster: "Egeni Bode community",
-    status: "REJECTED",
+    status: "PENDING",
   },
   {
     id: "7",
@@ -35,7 +35,7 @@ const fieldAgentData = [
     engagement: "34",
     farmers: "34",
     cluster: "Eshan Community",
-    status: "APPROVED",
+    status: "PENDING",
   },
   {
     id: "3",
@@ -65,7 +65,7 @@ const fieldAgentData = [
     engagement: "65",
     farmers: "65",
     cluster: "Benden Community",
-    status: "APPROVED",
+    status: "PENDING",
   },
 ];
 

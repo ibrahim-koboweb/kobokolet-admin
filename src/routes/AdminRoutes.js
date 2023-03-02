@@ -3,14 +3,26 @@ import { Login } from "../pages/Auth";
 import { Dashboard } from "../pages/Others";
 import Layout from "../components/Layouts";
 
-import { AllFieldAgents, AddFieldAgents, PendingFieldAgents,} from "../pages/FieldAgent";
-import  { EngagementHome, CreateEngagement, PendingEngagement} from "../pages/Engagement";
-import { AllAttendees, AllFarmers, OngoingEnumeration } from "../pages/Enumeration";
+import {
+  AllFieldAgents,
+  AddFieldAgents,
+  PendingFieldAgents,
+} from "../pages/FieldAgent";
+import {
+  EngagementHome,
+  EngagementDetails,
+  CreateEngagement,
+  PendingEngagement,
+} from "../pages/Engagement";
+import EngagementAttendees  from "../pages/Engagement/EngagementDetails/EngagementAttendees";
+import {
+  AllAttendees,
+  AllFarmers,
+  OngoingEnumeration,
+} from "../pages/Enumeration";
 import Cluster from "../pages/Cluster";
 import Influencer from "../pages/Influencer";
-import EngagementDetails from "../pages/Engagement/EngagementHome/EngagementDetails";
-
-
+// import EngagementDetails from "../pages/Engagement/EngagementHome/EngagementDetails";
 const AdminRoutes = () => {
   return (
     <Router>
@@ -23,7 +35,8 @@ const AdminRoutes = () => {
           <Route path="/add-agents" element={<AddFieldAgents />} />
           <Route path="/pending-agents" element={<PendingFieldAgents />} />
           <Route path="/engagements" element={<EngagementHome />} />
-          <Route path="/engagement-DETAILS" element={<EngagementDetails />} />
+          <Route path="/engagement/details" element={<EngagementDetails />} />
+          <Route path="/engagement/details/attendees" element={<EngagementAttendees />} />
           <Route path="/create-engagement" element={<CreateEngagement />} />
           <Route path="/pending-engagement" element={<PendingEngagement />} />
           <Route path="/enumeration" element={<AllAttendees />} />
