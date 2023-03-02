@@ -38,6 +38,7 @@ const fieldAgentData = [
     status: "PENDING",
   },
   {
+
     id: "3",
     agent_id: "9854",
     agent_name: "Luke Parkin",
@@ -57,6 +58,7 @@ const fieldAgentData = [
     cluster: "Afao Community",
     status: "PENDING",
   },
+
   {
     id: "5",
     agent_id: "5627",
