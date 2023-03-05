@@ -68,10 +68,10 @@ const fieldAgentData = [
   },
 ];
 
-export default function AllAttendees() {
+export default function EnumerationList() {
   return (
     <div>
-      <div className="text-xl pt-1">All Attendees</div>
+    
 
       <div className="mt-6 bg-white px-4 pt-3 pb-4 rounded-sm border border-gray-200 flex-1">
         <div className="flex items-end py-2 justify-between">
@@ -80,15 +80,16 @@ export default function AllAttendees() {
               for="countries"
               class="block mb-2 text-sm font-regular text-gray-900 dark:text-white"
             >
-              Sort by NIN Status
+              Sort by Status
             </label>
             <select
               id="countries"
               class=" border border-gray-300 text-gray-900 text-sm rounded-md font-light focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             >
-              <option selected>All NIN Status </option>
-              <option value="US">Have NIN</option>
-              <option value="CA">Don't have NIN</option>
+              <option selected>All Status </option>
+              <option value="US">Pending Request</option>
+              <option value="CA">Approved Agents</option>
+              <option value="FR">Rejected Agents</option>
             </select>
           </div>
           {/* <strong className="text-gray-700 font-medium">All Field Agents</strong> */}
@@ -104,7 +105,7 @@ export default function AllAttendees() {
             />
           </div>
         </div>
-        <div className="border-x border-gray-200 rounded-sm mt-3">
+        <div className=" rounded-sm mt-3">
           <table className="w-full text-gray-700">
             <thead>
               <tr>
@@ -140,7 +141,7 @@ export default function AllAttendees() {
                   <td>#567657</td>
                   <td>
                     <span className="flex items-center gap-2">
-                      <Link to="/attendee-details">
+                      <Link to="/engagement/details">
                         <GrView />
                       </Link>
                       <FiEdit /> <MdDeleteOutline fontSize={20} />

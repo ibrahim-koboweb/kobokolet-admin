@@ -27,27 +27,25 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     path: "#",
     icon: <HiOutlineUsers />,
     dropdown: [
-        {
-          key: "allfieldagents",
-          label: "All Field Agents",
-          path: "/field-agents",
-          icon: <MdOutlineCircle />,
-        },
-        {
-          key: "addfieldagents",
-          label: "Add Field Agents",
-          path: "/add-agents",
-          icon: <MdOutlineCircle />,
-        },
-        {
-          key: "pendingagentrequest",
-          label: "Pending Agents Request",
-          path: "/pending-agents",
-          icon: <MdOutlineCircle />,
-        },
-       
-
-      ]
+      {
+        key: "allfieldagents",
+        label: "All Field Agents",
+        path: "/field-agents",
+        icon: <MdOutlineCircle />,
+      },
+      {
+        key: "addfieldagents",
+        label: "Add Field Agents",
+        path: "/add-agents",
+        icon: <MdOutlineCircle />,
+      },
+      {
+        key: "pendingagentrequest",
+        label: "Pending Agents Request",
+        path: "/pending-agents",
+        icon: <MdOutlineCircle />,
+      },
+    ],
   },
   {
     key: "engagements",
@@ -73,9 +71,7 @@ export const DASHBOARD_SIDEBAR_LINKS = [
         path: "/pending-engagement",
         icon: <MdOutlineCircle />,
       },
-
-    ]
-
+    ],
   },
   {
     key: "enumeration",
@@ -84,9 +80,15 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     icon: <HiOutlineDocumentCheck />,
     dropdown: [
       {
+        key: "enumerationhome",
+        label: "Enumeration Dashboard",
+        path: "/enumeration",
+        icon: <MdOutlineCircle />,
+      },
+      {
         key: "allattendees",
         label: "All Attendees",
-        path: "/enumeration",
+        path: "/all-attendees",
         icon: <MdOutlineCircle />,
       },
       {
@@ -101,9 +103,7 @@ export const DASHBOARD_SIDEBAR_LINKS = [
         path: "/all-farmers",
         icon: <MdOutlineCircle />,
       },
-
-    ]
-
+    ],
   },
   {
     key: "cluster",

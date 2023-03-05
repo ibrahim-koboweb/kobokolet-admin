@@ -16,12 +16,17 @@ import {
 } from "../pages/Engagement";
 import EngagementAttendees  from "../pages/Engagement/EngagementDetails/EngagementAttendees";
 import {
+  FarmerDetails,
+  AttendeeDetails,
+  EnumerationHome,
   AllAttendees,
   AllFarmers,
   OngoingEnumeration,
 } from "../pages/Enumeration";
 import Cluster from "../pages/Cluster";
 import Influencer from "../pages/Influencer";
+// import AttendeeDetails from "../pages/Enumeration/AllAttendees/AttendeeDetails";
+import EnumerationStatistic from "../pages/Enumeration/EnumerationHome/EnumerationStatistic"
 // import EngagementDetails from "../pages/Engagement/EngagementHome/EngagementDetails";
 const AdminRoutes = () => {
   return (
@@ -39,9 +44,12 @@ const AdminRoutes = () => {
           <Route path="/engagement/details/attendees" element={<EngagementAttendees />} />
           <Route path="/create-engagement" element={<CreateEngagement />} />
           <Route path="/pending-engagement" element={<PendingEngagement />} />
-          <Route path="/enumeration" element={<AllAttendees />} />
+          <Route path="/enumeration" element={<EnumerationHome />} />
+          <Route path="/all-attendees" element={<AllAttendees />} />
+          <Route path="/attendee-details" element={<AttendeeDetails />} />
           <Route path="/ongoing-enumeration" element={<OngoingEnumeration />} />
           <Route path="/all-farmers" element={<AllFarmers />} />
+          <Route path="/farmer-details" element={<FarmerDetails />} />
           <Route path="/cluster" element={<Cluster />} />
           <Route path="/influencer" element={<Influencer />} />
         </Route>
