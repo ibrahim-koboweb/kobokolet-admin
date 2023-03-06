@@ -71,20 +71,18 @@ const fieldAgentData = [
 export default function EnumerationList() {
   return (
     <div>
-    
-
       <div className="mt-6 bg-white px-4 pt-3 pb-4 rounded-sm border border-gray-200 flex-1">
         <div className="flex items-end py-2 justify-between">
           <div>
             <label
-              for="countries"
-              class="block mb-2 text-sm font-regular text-gray-900 dark:text-white"
+              // for="countries"
+              className="block mb-2 text-sm font-regular text-gray-900 dark:text-white"
             >
               Sort by Status
             </label>
             <select
               id="countries"
-              class=" border border-gray-300 text-gray-900 text-sm rounded-md font-light focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+              className=" border border-gray-300 text-gray-900 text-sm rounded-md font-light focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             >
               <option selected>All Status </option>
               <option value="US">Pending Request</option>
@@ -141,7 +139,7 @@ export default function EnumerationList() {
                   <td>#567657</td>
                   <td>
                     <span className="flex items-center gap-2">
-                      <Link to="/engagement/details">
+                      <Link to="/farmer-details">
                         <GrView />
                       </Link>
                       <FiEdit /> <MdDeleteOutline fontSize={20} />

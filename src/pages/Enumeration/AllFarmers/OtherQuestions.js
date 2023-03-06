@@ -9,7 +9,7 @@ export default function OtherQuestions() {
   const [isOpenThird, setIsOpenThird] = useState(false);
 
   return (
-    <div className="bg-white mt-5">
+    <div className="bg-white ">
       <div id="accordion-open" data-accordion="open">
         <h2 id="accordion-open-heading-1">
           <button

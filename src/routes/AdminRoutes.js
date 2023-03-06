@@ -24,10 +24,10 @@ import {
   OngoingEnumeration,
 } from "../pages/Enumeration";
 import Cluster from "../pages/Cluster";
+import CreateCluster from "../pages/Cluster/CreateCluster";
 import Influencer from "../pages/Influencer";
-// import AttendeeDetails from "../pages/Enumeration/AllAttendees/AttendeeDetails";
-import EnumerationStatistic from "../pages/Enumeration/EnumerationHome/EnumerationStatistic"
-// import EngagementDetails from "../pages/Engagement/EngagementHome/EngagementDetails";
+
+
 const AdminRoutes = () => {
   return (
     <Router>
@@ -41,7 +41,10 @@ const AdminRoutes = () => {
           <Route path="/pending-agents" element={<PendingFieldAgents />} />
           <Route path="/engagements" element={<EngagementHome />} />
           <Route path="/engagement/details" element={<EngagementDetails />} />
-          <Route path="/engagement/details/attendees" element={<EngagementAttendees />} />
+          <Route
+            path="/engagement/details/attendees"
+            element={<EngagementAttendees />}
+          />
           <Route path="/create-engagement" element={<CreateEngagement />} />
           <Route path="/pending-engagement" element={<PendingEngagement />} />
           <Route path="/enumeration" element={<EnumerationHome />} />
@@ -51,6 +54,7 @@ const AdminRoutes = () => {
           <Route path="/all-farmers" element={<AllFarmers />} />
           <Route path="/farmer-details" element={<FarmerDetails />} />
           <Route path="/cluster" element={<Cluster />} />
+          <Route path="/cluster/create" element={<CreateCluster />} />
           <Route path="/influencer" element={<Influencer />} />
         </Route>
       </Routes>

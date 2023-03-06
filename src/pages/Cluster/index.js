@@ -85,19 +85,36 @@ const fieldAgentData = [
 export default function Cluster() {
   return (
     <div>
-      <div className="text-base pt-1">Cluster</div>
+      <div className="flex items-center justify-between">
+        <div className="text-2xl  pt-1 font-medium">Clusters</div>
+        <div className={"flex items-center gap-4"}>
+          <button
+            className="bg-primary py-3 px-6 rounded text-white"
+            // onClick={handlePrint}
+          >
+            <Link to="/cluster/create">Create New Cluster</Link>
+          </button>
+
+          {/* <button
+            className="bg-grey-100 border border-primary py-3 px-6 rounded text-primary"
+            // onClick={handlePrint}
+          >
+            Create Clusters
+          </button> */}
+        </div>
+      </div>
       <div className="mt-6 bg-white px-4 pt-3 pb-4 rounded-sm border border-gray-200 flex-1">
         <div className="flex items-end py-2 justify-between">
           <div>
             <label
-              for="countries"
-              class="block mb-2 text-sm font-regular text-gray-900 dark:text-white"
+              // htmlFor="countries"
+              className="block mb-2 text-sm font-regular text-gray-900 dark:text-white"
             >
               Sort by Status
             </label>
             <select
               id="countries"
-              class=" border border-gray-300 text-gray-900 text-sm rounded-md font-light focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+              className=" border border-gray-300 text-gray-900 text-sm rounded-md font-light focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             >
               <option selected>All Status </option>
               <option value="US">Pending Request</option>

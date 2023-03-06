@@ -77,14 +77,14 @@ export default function AllFarmers() {
         <div className="flex items-end py-2 justify-between">
           <div>
             <label
-              for="countries"
-              class="block mb-2 text-sm font-regular text-gray-900 dark:text-white"
+              // for="countries"
+              className="block mb-2 text-sm font-regular text-gray-900 dark:text-white"
             >
               Sort by NIN Status
             </label>
             <select
               id="countries"
-              class=" border border-gray-300 text-gray-900 text-sm rounded-md font-light focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+              className=" border border-gray-300 text-gray-900 text-sm rounded-md font-light focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
             >
               <option selected>All NIN Status </option>
               <option value="US">Have NIN</option>
@@ -144,7 +144,7 @@ export default function AllFarmers() {
                   <td>#567657</td>
                   <td>
                     <span className="flex items-center gap-2">
-                      <Link to="/attendee-details">
+                      <Link to="/farmer-details">
                         <GrView />
                       </Link>
                       <FiEdit /> <MdDeleteOutline fontSize={20} />
