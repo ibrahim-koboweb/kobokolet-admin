@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { getAgentStatus } from "../../lib/helpers";
 import { GrView } from "react-icons/gr";
 import { FiEdit } from "react-icons/fi";
 import { MdDeleteOutline } from "react-icons/md";
@@ -9,76 +8,14 @@ import { format } from "date-fns";
 
 const fieldAgentData = [
   {
-    id: "1",
-    agent_id: "4324",
-    agent_name: "Shirley A. Lape",
-    phone_no: "56",
-    state: "Kano",
-    farmers: "5",
-    cluster: "Egeni Bode LGA",
-    city: "Egeni",
+    id: "4324",
+    state: "Kogi State",
+    city: "Lokoga",
+    lga: "Bassa LGA",
+    ward: "Ogene",
+    attendee: "10",
+    assigned_farmer: "5",
     creation_date: "2022-05-17T03:24:00",
-    status: "REJECTED",
-  },
-  {
-    id: "7",
-    agent_id: "7453",
-    agent_name: "Ryan Carroll",
-    phone_no: "56",
-    state: "Katsina",
-    farmers: "14",
-    cluster: "Akoko Edo",
-    city: "Akoko",
-    creation_date: "2022-05-17T03:24:00",
-    status: "PENDING",
-  },
-  {
-    id: "2",
-    agent_id: "5434",
-    agent_name: "Mason Nash",
-    phone_no: "56",
-    state: "Abuja",
-    farmers: "34",
-    cluster: "Eshan LGA",
-    city: "Eshan",
-    creation_date: "2022-05-17T03:24:00",
-    status: "APPROVED",
-  },
-  {
-    id: "3",
-    agent_id: "9854",
-    agent_name: "Luke Parkin",
-    phone_no: "56",
-    state: "Kaduna",
-    farmers: "12",
-    cluster: "Esako LGA",
-    city: "Esako",
-    creation_date: "2022-05-17T03:24:00",
-    status: "PENDING",
-  },
-  {
-    id: "4",
-    agent_id: "8763",
-    agent_name: "Anthony Fry",
-    phone_no: "56",
-    state: "Sokoto",
-    farmers: "32",
-    cluster: "Afao LGA",
-    city: "Afao",
-    creation_date: "2022-05-17T03:24:00",
-    status: "PENDING",
-  },
-  {
-    id: "5",
-    agent_id: "5627",
-    agent_name: "Ryan Carroll",
-    phone_no: "56",
-    state: "borno",
-    farmers: "65",
-    city: "Benden",
-    cluster: "Benden LGA",
-    creation_date: "2022-05-17T03:24:00",
-    status: "APPROVED",
   },
 ];
 
@@ -139,15 +76,14 @@ export default function Cluster() {
           <table className="w-full text-gray-700">
             <thead>
               <tr>
-                <th>S/N</th>
-                <th>Engagement Type</th>
-                <th>Assigned Agent</th>
-                <th>Attendees</th>
+                <th>Cluster ID</th>
                 <th>State</th>
-                <th>LGA</th>
                 <th>City</th>
+                <th>LGA</th>
+                <th>Ward</th>
+                <th>Assigned Attendees</th>
+                <th>Assigned Agent</th>
                 <th>Date</th>
-                <th>Status</th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -155,24 +91,21 @@ export default function Cluster() {
               {fieldAgentData.map((agent) => (
                 <tr key={agent.id}>
                   <td>
-                    <Link to={`/order/${agent.id}`}>#{agent.id}</Link>
+                    <Link>#{agent.id}</Link>
                   </td>
                   <td>
-                    <Link to="#">{agent.agent_name}</Link>
+                    <Link>{agent.state}</Link>
                   </td>
                   <td>
-                    <Link to={`/product/${agent.agent_id}`}>
-                      #{agent.agent_id}
-                    </Link>
+                    <Link to="#">{agent.city}</Link>
                   </td>
-                  <td>{agent.phone_no}</td>
-                  <td>{agent.state}</td>
-                  <td>{agent.cluster}</td>
-                  <td>{agent.city}</td>
+                  <td>{agent.lga}</td>
+                  <td>{agent.ward}</td>
+                  <td>{agent.attendee}</td>
+                  <td>{agent.assigned_farmer}</td>
                   <td>
                     {format(new Date(agent.creation_date), "dd MMM yyyy")}
                   </td>
-                  <td>{getAgentStatus(agent.status)}</td>
                   <td>
                     <span className="flex items-center gap-2">
                       <Link to="/engagement/details">

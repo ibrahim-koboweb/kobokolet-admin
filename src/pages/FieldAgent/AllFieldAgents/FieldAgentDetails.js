@@ -1,37 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import OtherQuestions from "./OtherQuestions";
-import { useRef } from "react";
-import { useReactToPrint } from "react-to-print";
 
 
-export default function FarmerDetails() {
-
-    const componentRef = useRef()
-    const handlePrint = useReactToPrint({
-        content: () => componentRef.current,
-        documentTitle: 'farmer data',
-        onAfterPrint: () => alert('print success')
-    })
-
+export default function FieldAgentDetails() {
   return (
-    <div
-      ref={componentRef}
-      style={{ width: "100%", height: window.innerHeight }}
-      className="p-4"
-    >
-      <div className="flex items-center justify-between">
-        <div className="text-2xl mt-2 pt-1 font-medium">Farmer Details</div>
-        <button
-          className="bg-primary py-3 px-6 rounded text-white"
-          onClick={handlePrint}
-        >
-          print details to pdf
-        </button>
-      </div>
-
-      <div className="grid lg:grid-cols-2 gap-3 mt-4 lg:grid-rows-1 ">
-        <div className="bg-grey-100 rounded ">
+    <div className="mt-4">
+      <div className="text-xl pt-1">Field Agent Details</div>
+      <div className="grid lg:grid-cols-2 lg:grid-rows-1 ">
+        <div className="bg-grey-100 rounded p-6 ">
           <div className="bg-white rounded p-6">
             <div
               className="h-28 w-28 rounded-full bg-sky-500 bg-cover bg-no-repeat bg-center"
@@ -56,7 +32,6 @@ export default function FarmerDetails() {
                   <p className="font-extralight">sani@gmail.com</p>
                 </span>
               </div>
-
               <div>
                 <span className="flex gap-2 mt-2 items-center">
                   <p>Gender:</p> <p className="font-extralight">Male</p>
@@ -135,8 +110,6 @@ export default function FarmerDetails() {
             </div>
           </div>
         </div>
-
-        <OtherQuestions />
       </div>
     </div>
   );

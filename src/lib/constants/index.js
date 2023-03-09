@@ -110,7 +110,20 @@ export const DASHBOARD_SIDEBAR_LINKS = [
     label: "Cluster",
     path: "/cluster",
     icon: <BiHive />,
-    dropdown: false,
+    dropdown: [
+      {
+        key: "allcluster",
+        label: "All Cluster",
+        path: "/cluster",
+        icon: <MdOutlineCircle />,
+      },
+      {
+        key: "addcluster",
+        label: "Add Cluster",
+        path: "/cluster/create",
+        icon: <MdOutlineCircle />,
+      },
+    ],
   },
   {
     key: "influencer",

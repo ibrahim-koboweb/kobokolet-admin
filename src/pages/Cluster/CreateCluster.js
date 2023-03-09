@@ -5,27 +5,31 @@ export default function CreateCluster() {
     <div className="grid grid-cols-12 gap-4">
       <div className="col-start-4 col-span-6 border rounded bg-white">
         <div className="text-xl font-medium text-center my-8">
-          Create an Engagement
+          Add a Cluster
         </div>
         <form>
-          <div className="px-8">
-            <div className="">
+         
+          <div className="grid grid-cols-2 px-6 py-2">
+            <div className="p-2">
+              <label className="block text-gray-700 mb-2 text-sm">Cluster Name</label>
+              <input className="text-sm bg-gray-50 appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+            </div>
+
+            <div className="p-2">
+              <label className="block text-gray-700 mb-2 text-sm">Farm Size</label>
+              <input className="text-sm bg-gray-50 appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+            </div>
+
+            <div className="p-2">
               <label className="block text-gray-700 mb-2 text-sm">
-                Select Engagement Type
+                Select  State
               </label>
               <select className="text-sm bg-gray-50 appearance-none border-gray-300 rounded w-full py-3 px-3  text-gray-500  leading-tight focus:outline-none focus:shadow-outline">
                 <option disabled selected>
                   --Select State--
                 </option>
-                <option >Lagos State</option>
+                <option>Lagos State</option>
               </select>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 px-6 py-2">
-            <div className="p-2">
-              <label className="block text-gray-700 mb-2 text-sm">State</label>
-              <input className="text-sm bg-gray-50 appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
             </div>
 
             <div className="p-2">
@@ -34,17 +38,7 @@ export default function CreateCluster() {
             </div>
 
             <div className="p-2">
-              <label className="block text-gray-700 mb-2 text-sm">Ward</label>
-              <input className="text-sm bg-gray-50 appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-            </div>
-
-            <div className="p-2">
-              <label className="block text-gray-700 mb-2 text-sm">City</label>
-              <input className="text-sm bg-gray-50 appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-            </div>
-
-            <div className="p-2">
-              <label className="block text-gray-700 mb-2 text-sm">Date</label>
+              <label className="block text-gray-700 mb-2 text-sm">Community</label>
               <input className="text-sm bg-gray-50 appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
             </div>
 

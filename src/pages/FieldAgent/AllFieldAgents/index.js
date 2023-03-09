@@ -154,7 +154,10 @@ export default function AllFieldAgents() {
                   <td>{getAgentStatus(agent.status)}</td>
                   <td>
                     <span className="flex items-center gap-2">
-                      <GrView /> <FiEdit /> <MdDeleteOutline fontSize={20} />
+                      <Link to="/field-agents/details">
+                        <GrView />
+                      </Link>
+                      <FiEdit /> <MdDeleteOutline fontSize={20} />
                     </span>
                   </td>
                 </tr>

@@ -4,6 +4,7 @@ import { Dashboard } from "../pages/Others";
 import Layout from "../components/Layouts";
 
 import {
+  FieldAgentDetails,
   AllFieldAgents,
   AddFieldAgents,
   PendingFieldAgents,
@@ -26,6 +27,7 @@ import {
 import Cluster from "../pages/Cluster";
 import CreateCluster from "../pages/Cluster/CreateCluster";
 import Influencer from "../pages/Influencer";
+// import FarmerList from "../pages/Enumeration/AllFarmers/FarmerList";
 
 
 const AdminRoutes = () => {
@@ -37,6 +39,7 @@ const AdminRoutes = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
           <Route path="/field-agents" element={<AllFieldAgents />} />
+          <Route path="/field-agents/details" element={<FieldAgentDetails />} />
           <Route path="/add-agents" element={<AddFieldAgents />} />
           <Route path="/pending-agents" element={<PendingFieldAgents />} />
           <Route path="/engagements" element={<EngagementHome />} />
@@ -53,6 +56,7 @@ const AdminRoutes = () => {
           <Route path="/ongoing-enumeration" element={<OngoingEnumeration />} />
           <Route path="/all-farmers" element={<AllFarmers />} />
           <Route path="/farmer-details" element={<FarmerDetails />} />
+          {/* <Route path="/farmerlist" element={<FarmerList />} /> */}
           <Route path="/cluster" element={<Cluster />} />
           <Route path="/cluster/create" element={<CreateCluster />} />
           <Route path="/influencer" element={<Influencer />} />

@@ -1,5 +1,6 @@
 import AllFieldAgents from "./AllFieldAgents";
 import AddFieldAgents from "./AddFieldAgents";
 import PendingFieldAgents from "./PendingFieldAgents";
+import FieldAgentDetails from "./AllFieldAgents/FieldAgentDetails";
 
-export { AllFieldAgents, AddFieldAgents, PendingFieldAgents };
+export { FieldAgentDetails, AllFieldAgents, AddFieldAgents, PendingFieldAgents };

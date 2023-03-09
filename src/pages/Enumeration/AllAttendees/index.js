@@ -21,7 +21,6 @@ export default function AllAttendees() {
 
   useEffect(() => {
     setAttendeeData(getAttendeeData());
-    ;
   }, []);
 
 
@@ -69,22 +68,59 @@ export default function AllAttendees() {
       </div>
       <div className="mt-6 bg-white px-4 pt-3 pb-4 rounded-sm border border-gray-200 flex-1">
         <div className="flex items-end py-2 justify-between">
-          <div>
-            <label
-              // for="countries"
-              className="block mb-2 text-sm font-regular text-gray-900 dark:text-white"
-            >
-              Sort by NIN Status
-            </label>
-            <select
-              id="countries"
-              className=" border border-gray-300 text-gray-900 text-sm rounded-md font-light focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-            >
-              <option selected>All NIN Status </option>
-              <option value="US">Have NIN</option>
-              <option value="CA">Don't have NIN</option>
-            </select>
+          <div className={"flex gap-2 items-center"}>
+            <div>
+              <label
+                // for="countries"
+                className="block mb-2 text-sm font-regular text-gray-900 dark:text-white"
+              >
+                NIN Status
+              </label>
+              <select
+                id="countries"
+                className=" border border-gray-200 text-gray-500 text-sm rounded-md font-light focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+              >
+                <option selected>All NIN Status </option>
+                <option value="US">Have NIN</option>
+                <option value="CA">Don't have NIN</option>
+              </select>
+            </div>
+
+            <div>
+              <label
+                // for="countries"
+                className="block mb-2 text-sm font-regular text-gray-900 dark:text-white"
+              >
+                Gender
+              </label>
+              <select
+                id="countries"
+                className=" border border-gray-200 text-gray-500 text-sm rounded-md font-light focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+              >
+                <option selected>All Gender </option>
+                <option value="US">Male</option>
+                <option value="CA">Female</option>
+              </select>
+            </div>
+
+            <div>
+              <label
+                // for="countries"
+                className="block mb-2 text-sm font-regular text-gray-900 dark:text-white"
+              >
+                Cluster
+              </label>
+              <select
+                id="countries"
+                className=" border border-gray-200 text-gray-500 text-sm rounded-md font-light focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+              >
+                <option selected>All Clusters </option>
+                <option value="US">Cluster 001</option>
+                <option value="CA">Cluster 002</option>
+              </select>
+            </div>
           </div>
+
           {/* <strong className="text-gray-700 font-medium">All Field Agents</strong> */}
           <div className="relative">
             <HiOutlineSearch
